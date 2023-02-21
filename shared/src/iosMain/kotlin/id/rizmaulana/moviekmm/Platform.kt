@@ -1,5 +1,6 @@
 package id.rizmaulana.moviekmm
 
+import org.koin.dsl.module
 import platform.UIKit.UIDevice
 
 class IOSPlatform: Platform {
@@ -7,3 +8,7 @@ class IOSPlatform: Platform {
 }
 
 actual fun getPlatform(): Platform = IOSPlatform()
+
+actual fun platformModule() = module {
+    //TODO: RizkiM add ios client engine
+}
