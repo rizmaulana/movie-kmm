@@ -2,14 +2,14 @@ package id.rizmaulana.moviekmm.viewmodel
 
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import id.rizmaulana.moviekmm.domain.async.AsyncResult
-import id.rizmaulana.moviekmm.domain.interactor.MovieInteractorImpl
+import id.rizmaulana.moviekmm.domain.interactor.MovieInteractor
 import id.rizmaulana.moviekmm.domain.model.Movie
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class MovieViewModel constructor(private val interactor: MovieInteractorImpl) : ViewModel() {
+class MovieViewModel constructor(private val interactor: MovieInteractor) : ViewModel() {
 
     private val moviesMutable =
         MutableStateFlow<AsyncResult<List<Movie>>>(AsyncResult.Uninitialized)

@@ -13,13 +13,14 @@ import io.ktor.client.plugins.logging.Logging
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 import org.koin.core.context.startKoin
+import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 
-fun initKoin() {
-    startKoin {
-        appModule()
+fun initKoin(appDeclaration: KoinAppDeclaration = {}) = startKoin {
+    modules(
+        appModule(),
         platformModule()
-    }
+    )
 }
 
 fun appModule() = module {
@@ -55,3 +56,5 @@ fun appModule() = module {
         }
     }
 }
+
+
