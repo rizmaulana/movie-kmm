@@ -26,6 +26,7 @@ kotlin {
     val coroutinesVersion = "1.6.4"
     val koinVersion = "3.1.2"
     val koinCoreVersion = "3.1.4"
+    val mokoMvvmVersion = "0.13.1"
 
 
     sourceSets {
@@ -39,7 +40,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-json:$ktorVersion")
                 implementation("io.ktor:ktor-client-logging:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-
+                implementation("dev.icerock.moko:mvvm-core:$mokoMvvmVersion")
             }
         }
 
@@ -47,7 +48,6 @@ kotlin {
             dependencies{
                 implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
-                
             }
 
         }
