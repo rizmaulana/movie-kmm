@@ -5,7 +5,6 @@ import id.rizmaulana.moviekmm.data.model.MovieResponse
 import id.rizmaulana.moviekmm.domain.model.Movie
 
 
-
 class MovieDataMapper {
 
     fun mapMovieResponse(response: MovieResponse) = Movie(
@@ -21,6 +20,7 @@ class MovieDataMapper {
             append(response.backdropPath.orEmpty())
         },
         rating = response.voteAverage,
+        releaseDate = response.releaseDate.orEmpty()
     )
 
 

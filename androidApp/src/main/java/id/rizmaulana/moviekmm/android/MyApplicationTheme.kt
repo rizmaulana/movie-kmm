@@ -27,8 +27,8 @@ fun MyApplicationTheme(
             secondary = Color(0xFF03DAC5)
         )
     } else {
-        lightColors(
-            primary = Color(0xFF6200EE),
+        darkColors(
+            primary = Color(0xFFBB86FC),
             primaryVariant = Color(0xFF3700B3),
             secondary = Color(0xFF03DAC5)
         )

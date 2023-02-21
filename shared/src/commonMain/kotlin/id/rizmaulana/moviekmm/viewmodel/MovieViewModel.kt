@@ -29,6 +29,7 @@ class MovieViewModel constructor(private val interactor: MovieInteractor) : View
                 val movie = interactor.getMovies()
                 moviesMutable.value = AsyncResult.Success(movie)
             } catch (e: Exception) {
+                e.printStackTrace()
                 moviesMutable.value = AsyncResult.Error(e.message.orEmpty())
             }
         }

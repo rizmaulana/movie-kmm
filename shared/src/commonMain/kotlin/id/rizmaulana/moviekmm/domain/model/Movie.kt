@@ -6,5 +6,6 @@ data class Movie(
     val description: String = "",
     val posterUrl: String = "",
     val bannerUrl: String = "",
-    val rating: Float = 0f
+    val rating: Float = 0f,
+    val releaseDate: String = ""
 )

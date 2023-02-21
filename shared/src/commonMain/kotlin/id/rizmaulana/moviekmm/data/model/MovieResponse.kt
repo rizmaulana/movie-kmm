@@ -13,7 +13,7 @@ data class MovieResponse(
     @SerialName("overview")
     val overview: String? = "",
     @SerialName("release_date")
-    val releaseDate: Boolean = false,
+    val releaseDate: String? = null,
     @SerialName("genre_ids")
     val genreIds: List<Int> = emptyList(),
     @SerialName("backdrop_path")

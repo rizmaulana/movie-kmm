@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    kotlin("plugin.serialization") version "1.7.10"
 }
 
 kotlin {
@@ -11,7 +12,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -50,7 +51,7 @@ kotlin {
         }
 
         val androidMain by getting {
-            dependencies{
+            dependencies {
                 implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
             }
