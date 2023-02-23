@@ -122,7 +122,7 @@ fun ContentScreen(
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(24.dp)) {
         MoviePlaySection(
             title = "Now Playing",
-            subtitle = "Watch your favourite movie of the year",
+            subtitle = "Watch your favorites movie of the year",
             movies = movies,
         ) {
             onMovieSelected.invoke(it)

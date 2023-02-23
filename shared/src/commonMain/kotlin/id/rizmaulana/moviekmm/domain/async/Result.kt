@@ -1,8 +1,10 @@
 package id.rizmaulana.moviekmm.domain.async
 
-sealed interface AsyncResult<out T> {
-    data class Success<T>(val data: T) : AsyncResult<T>
-    data class Error(val exceptionMessage: String) : AsyncResult<Nothing>
-    object Loading : AsyncResult<Nothing>
-    object Uninitialized : AsyncResult<Nothing>
+import id.rizmaulana.moviekmm.domain.model.Movie
+
+sealed interface AsyncResult {
+    data class Success(val data: List<Movie>) : AsyncResult
+    data class Error(val exceptionMessage: String) : AsyncResult
+    object Loading : AsyncResult
+    object Uninitialized : AsyncResult
 }

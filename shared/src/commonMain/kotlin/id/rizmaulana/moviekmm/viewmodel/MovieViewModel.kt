@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 class MovieViewModel constructor(private val interactor: MovieInteractor) : ViewModel() {
 
     private val moviesMutable =
-        MutableStateFlow<AsyncResult<List<Movie>>>(AsyncResult.Uninitialized)
+        MutableStateFlow<AsyncResult>(AsyncResult.Uninitialized)
     val movies = moviesMutable.asStateFlow()
 
     private val selectedMovieMutable = MutableStateFlow<Movie?>(null)

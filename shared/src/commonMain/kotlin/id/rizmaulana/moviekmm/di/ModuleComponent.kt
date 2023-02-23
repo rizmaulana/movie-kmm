@@ -23,6 +23,10 @@ fun initKoin(appDeclaration: KoinAppDeclaration = {}) = startKoin {
     )
 }
 
+fun initKoin() = initKoin {
+
+}
+
 fun appModule() = module {
     single {
         MovieDataMapper()
