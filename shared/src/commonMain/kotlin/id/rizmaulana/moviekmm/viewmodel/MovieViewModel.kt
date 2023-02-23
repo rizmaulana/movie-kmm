@@ -15,7 +15,7 @@ class MovieViewModel constructor(private val interactor: MovieInteractor) : View
         MutableStateFlow<AsyncResult>(AsyncResult.Uninitialized)
     val movies = moviesMutable.asStateFlow()
 
-    private val selectedMovieMutable = MutableStateFlow<Movie?>(null)
+    private val selectedMovieMutable = MutableStateFlow(Movie())
     val selectedMovie = selectedMovieMutable.asStateFlow()
 
     init {

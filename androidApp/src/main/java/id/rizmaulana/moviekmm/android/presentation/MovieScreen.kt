@@ -38,6 +38,7 @@ fun MovieScreen(viewModel: MovieViewModel = getViewModel()) {
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
+            .background(Color.Black)
             .statusBarsPadding(),
     ) {
         val modifier = Modifier.padding(it)
@@ -116,7 +117,7 @@ fun LoadingScreen(
 @Composable
 fun ContentScreen(
     modifier: Modifier = Modifier, movies: List<Movie>,
-    selectedMovie: Movie?,
+    selectedMovie: Movie,
     onMovieSelected: (Movie) -> Unit
 ) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(24.dp)) {
@@ -135,7 +136,7 @@ fun ContentScreen(
             textAlign = TextAlign.Left,
             fontWeight = FontWeight.SemiBold,
         )
-        if (selectedMovie != null) {
+        if (selectedMovie.id != 0) {
             MovieDetailComponent(movie = selectedMovie)
         }
     }

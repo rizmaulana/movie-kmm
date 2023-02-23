@@ -33,7 +33,7 @@ fun MovieBannerItem(
 ) {
     Column(
         modifier = modifier
-            .width(100.dp)
+            .width(130.dp)
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
@@ -41,8 +41,8 @@ fun MovieBannerItem(
                 .scale(Scale.FIT)
                 .build(),
             modifier = Modifier
-                .width(100.dp)
-                .height(180.dp)
+                .width(130.dp)
+                .height(200.dp)
                 .clip(RoundedCornerShape(8.dp)),
             contentDescription = null,
             alignment = Alignment.TopCenter,

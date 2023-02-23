@@ -30,12 +30,7 @@ public class MovieObservableObject : ObservableObject {
         viewModel = wrapped
         
         movieAsync = wrapped.movies.value as! AsyncResult
-        var movie = wrapped.movies.value as? Movie?
-        if(movie == nil){
-            selectedMovieState = Movie.init(id: 0, title: "", description: "", posterUrl: "", bannerUrl: "", rating: 0, releaseDate: "")
-        }else {
-            selectedMovieState = movie!!
-        }
+        selectedMovieState = wrapped.selectedMovie.value as! Movie
         
         (wrapped.movies.asPublisher() as AnyPublisher<AsyncResult, Never>)
             .receive(on: RunLoop.main)
